@@ -59,7 +59,7 @@ int main(void) {
 
     // Print result
     if (missing != -1)
-        printf("Missing counselor: %d\n", missing);
+        printf("Counselor has not been assigned: %d\n", missing);
     else
         printf("No missing counselor found.\n");
 
