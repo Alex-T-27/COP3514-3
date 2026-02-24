@@ -11,7 +11,7 @@ int main(void) {
     for (int i = 0; i < n1; i++) {
         scanf("%d", &a1[i]);
     }
-    n2 = (n1 / 2) + 1; // Size of second array is half of first array
+    n2 = (n1 + 1) / 2; // Size of second array is half of first array
     int a2[n2]; // Declare second array
 
     //Call the function to compute the sums of pairs of elements in a1 and store them in a2
@@ -30,15 +30,12 @@ void compute(int *a1, int n1, int *a2, int n2) {
     int *left = a1; // Left pointer 
     int *right = a1 + n1 - 1; // Right pointer
     int *p = a2; // Pointer for traversing through a2
-    while (left < right) { // While left pointer is less than right pointer
-        int sum = *left + *right; // Calculate sum of elements at left and right pointers
-        *p = sum; // Store sum in a2
-        p++; // Move pointer p forward
+    while (left < right) { // While left pointer is less than right pointer and p is within bounds of a2
+        *p++ = *left + *right; // Calculate sum of elements at left and right pointers and store it in a2, then move p to the next position
         left++; // Move left pointer forward
         right--; // Move right pointer backward
-        if (*left == *right) {
+    }
+        if (left == right) {
             * p = *left; // If left and right pointers point to the same element, store that element in a2
-            break; // Break the loop since we have reached the middle element
         }
     }
-}
