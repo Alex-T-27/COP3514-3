@@ -34,7 +34,7 @@ int find_elements(int *a, int n1, int *b, int n2, int *c) {
 int main(void) {
     int n1, n2;
     // Ask user for size of first array
-    printf("Enter length of first array: ");  
+    printf("Enter the length of first array: ");  
     scanf("%d", &n1);
     int a[n1]; // Declare first array   
     // Read elements of first array
@@ -43,7 +43,7 @@ int main(void) {
         scanf("%d", &a[i]);
     }
     // Ask user for size of second array
-    printf("Enter length of second array: ");
+    printf("Enter the length of second array: ");
     scanf("%d", &n2);
     int b[n2]; // Declare second array
     // Read elements of second array
