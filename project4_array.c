@@ -34,20 +34,20 @@ int find_elements(int *a, int n1, int *b, int n2, int *c) {
 int main(void) {
     int n1, n2;
     // Ask user for size of first array
-    printf("Enter the length of first array: ");  
+    printf("Enter the length of the first array: ");  
     scanf("%d", &n1);
     int a[n1]; // Declare first array   
     // Read elements of first array
-    printf("Enter the elements in the first array: ");
+    printf("Enter elements in the first array: ");
     for (int i = 0; i < n1; i++) {
         scanf("%d", &a[i]);
     }
     // Ask user for size of second array
-    printf("Enter the length of second array: ");
+    printf("Enter the length of the second array: ");
     scanf("%d", &n2);
     int b[n2]; // Declare second array
     // Read elements of second array
-    printf("Enter the elements in the second array: ");
+    printf("Enter elements in the second array: ");
     for (int i = 0; i < n2; i++) {
         scanf("%d", &b[i]);
     }
